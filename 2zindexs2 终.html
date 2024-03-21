@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+        background-color: rgb(0, 0, 0);
+        height: 500px;
+  
+    }
+ 
+  
+
+    #picture2
+       {position: absolute;
+        top: 210%;
+        left: 1%;
+        width: 100%;
+
+       }  
+    #picture3
+       {position: absolute;
+        top: 370%;
+        left: 1%;
+        width: 100%;
+
+       }  
+       #picture4
+       {position: absolute;
+        top: 595%;
+        left: 10%;
+        width: 80%;
+
+       }  
+       #picture5
+       {position: absolute;
+        top: 600%;
+        left: 1%;
+        width: 100%;
+
+       } 
+       #picture6
+       {position: absolute;
+        top: 530%;
+        left: 1%;
+        width: 100%;
+
+       } 
+
+    #video1{
+        position: absolute;
+        top: -10%;
+        left: -4%;
+        width: 110%;
+       
+       }
+
+    
+       #text{
+        position: absolute;
+        top: 97%;
+        left:47%;
+        color:rgb(255, 255, 255);
+       }
+
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        top: 170%;
+        left: 44%;
+        width: 14%;
+        height: 20%;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #5b5b5b;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 90%;
+        width: 46%;
+        left: 4%;
+        bottom: 4px;
+        background-color: rgb(8, 8, 8);
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked + .slider {
+        background-color: #ffffff;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #ffffff;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+
+    #text2{
+        position: absolute;
+        top:120%;
+        left:43%;
+        color:rgb(255, 255, 255);
+       }
+   #text3{
+        position: absolute;
+        top:133%;
+        left:63%;
+        color:rgb(0, 0, 0);
+       }
+   #text4{
+        position: absolute;
+        top:133%;
+        left:26%;
+        color:rgb(255, 255, 255);
+       }
+   #text5{
+        position: absolute;
+        top:183%;
+        left:43%;
+        color:rgb(0, 0, 0);
+       }
+
+   #text6{
+        position: absolute;
+        top:600%;
+        left:48%;
+        color:rgb(0, 0, 0);
+       }
+
+
+    img {
+            position: absolute;
+            padding: 10px 0;
+            cursor: pointer;
+            top: 200vw;
+        }
+    .container {
+            height: 300vw; /* 设置容器高度为视口宽度的3倍 */
+            overflow: hidden; /* 隐藏超出容器的部分 */
+        }
+    video {
+            position: absolute;
+            top: 290%;
+            left: 10%;
+            width:95%; /* 设置视频宽度为容器宽度 */
+            height: auto; /* 设置视频高度自动适配 */
+        }
+        
+
+      
+
+
+</style>
+</head>
+<body>
+
+   <img src="手电.png" width="1000px" />
+
+   <video class="video"id="video1" autoplay>
+        <source src="escape4.mp4" type="video/mp4"
+        >
+        Your browser does not support the video tag.
+      </video>
+
+
+      <class id="text" >{every thing} escaped</class>
+   
+
+      <label class="switch">
+        <input type="checkbox" id="toggleSwitch">
+        <span class="slider"></span>
+      </label> 
+
+   
+
+    <video autoplay muted>
+            <source src="puppet2.mp4" type="video/mp4">
+     </video>
+ 
+    <class id="text2" >turn on the switch! open the light</class>
+    <class id="text3" >click on the screen to guide the light</class>
+    <class id="text4" >click here</class>
+    <class id="text5" >click here</class>
+    <class id="text6" >found you, catch!</class>
+
+
+ 
+     
+ 
+     <img class="picture"id="picture2" src="景观2.png">  
+    <img class="picture"id="picture3" src="景观22.png"> 
+    <img class="picture"id="picture6" src="景观24.png"> 
+
+
+
+    <img class="picture"id="picture5" src="草地.png"> 
+    
+    <div class="container">
+        <!-- 在这里添加你的内容 -->
+
+    </div>
+    
+
+
+    <a href="3zindex3终.html" target="_blank">
+        <img class="picture"id="picture4" src="puppet5.gif"> 
+    </a>
+
+
+ 
+<script>
+
+    // 定义要切换的文字内容
+    var texts = ["{every thing} escaped", "try to catch it"];
+    var index = 0;
+
+    // 定义切换文字的函数
+    function changeText() {
+      // 获取要显示文字的元素
+      var textElement = document.getElementById("text");
+
+      // 切换文字内容
+      textElement.innerHTML = texts[index];
+
+      // 更新索引
+      index = (index + 1) % texts.length;
+    }
+
+    // 页面加载完成后开始切换文字
+    window.onload = function() {
+      setInterval(changeText, 2000); // 每2秒切换一次文字
+    };
+
+
+
+
+    var img = document.getElementsByTagName("img")[0];
+    var timer = null;
+    var targetx = 0;
+    var targety = 0;
+    var leaderx = 0;
+    var leadery = 0;
+    //给整个文档绑定点击事件获取鼠标的位置。
+    document.onclick = function (event) {
+        //新五步
+        //兼容获取事件对象
+        event = event || window.event;
+        //鼠标在页面的位置 = 被卷去的部分+可视区域部分。
+        var pagey = event.pageY || scroll().top + event.clientY;
+        var pagex = event.pageX || scroll().left + event.clientX;
+
+        targety = pagey - 30;
+        targetx = pagex - 50;
+
+        //要用定时器，先清定时器
+        clearInterval(timer);
+        timer = setInterval(function () {
+            //为盒子的位置获取值
+            leaderx = img.offsetLeft;
+            //获取步长
+            var stepx = (targetx - leaderx) / 10;
+            //二次处理步长
+            stepx = stepx > 0 ? Math.ceil(stepx) : Math.floor(stepx);
+            leaderx = leaderx + stepx;
+            //赋值
+            img.style.left = leaderx + "px";
+
+
+            //为盒子的位置获取值
+            leadery = img.offsetTop;
+            //获取步长
+            var stepy = (targety - leadery) / 10;
+            //二次处理步长
+            stepy = stepy > 0 ? Math.ceil(stepy) : Math.floor(stepy);
+            leadery = leadery + stepy;
+            //赋值
+            img.style.top = leadery + "px";
+
+            //清定时器
+            if (Math.abs(targety - img.offsetTop) <= Math.abs(stepy) && Math.abs(targetx - img.offsetLeft) <= Math.abs(stepx)) {
+                img.style.top = targety + "px";
+                img.style.left = targetx + "px";
+                clearInterval(timer);
+            }
+        }, 30);
+    }
+
+
+
+
+// 获取开关和圆的元素
+        var toggleSwitch = document.getElementById("toggleSwitch");
+        var circle = document.querySelector(".circle");
+
+// 监听开关的状态改变事件
+toggleSwitch.addEventListener("change", function() {
+  // 如果开关被打开，则显示圆，否则隐藏圆
+  if (toggleSwitch.checked) {
+    circle.style.display = "block";
+  } else {
+    circle.style.display = "none";
+  }
+});
+
+// 监听鼠标移动事件
+document.addEventListener("mousemove", function(event) {
+  // 如果开关被打开，则更新圆的位置为鼠标的位置
+  if (toggleSwitch.checked) {
+    circle.style.left = event.clientX + "px";
+    circle.style.top = event.clientY + "px";
+  }
+});
+
+
+
+
+</script>
+
+</body>
+</html>

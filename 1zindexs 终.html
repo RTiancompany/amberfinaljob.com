@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+
+        @keyframes slide {
+        0% {top: 0;}
+         100% {top: 100%;}
+        }
+
+       .container {
+         position: relative;
+         height: 3px;
+         overflow: hidden;
+        }
+
+       .text {
+        position: absolute;
+        font-size: 40px;
+        color: #ffffff;
+        left:4% ;
+        top: 1%;
+        animation: slide 10s linear infinite;
+       }
+
+
+       .text2{
+        position: absolute;
+        font-size: 40px;
+        color: #ffffff;
+        right:4%;
+        top: 1%;
+        animation: slide 10s linear infinite;
+       }
+
+
+        .custom-text {
+        font-size: 30px;
+        font-family:'Gill Sans';
+        color: rgb(236, 236, 236);
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+       #picture
+       {position: absolute;
+        top: 5%;
+        left: 9%;
+        width: 80%;
+
+       }
+       #picture1
+       {position: absolute;
+        top: 3%;
+        left: 3%;
+        width: 95%;
+
+       }
+       #picture2
+       {position: absolute;
+        top: 4%;
+        right: -2%;
+        width: 12%;
+        height: 105%;
+
+       }
+       #picture3
+       {position: absolute;
+        top: 4%;
+        right: 89%;
+        width: 12%;
+        height: 105%;
+
+       }
+
+
+
+       #picturetwo{
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        width: 80%;
+       
+    }
+     
+       #ball {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: rgb(187, 187, 187);
+            border-radius: 50%;
+            transition: all 1s linear;
+        }
+      #picturethree{
+            position: absolute;
+            width: 130%;
+            height: 160%;
+            top: 29%;
+            left: 7%;
+            
+        }
+        .square {
+            display: inline-block;
+            width: 70px;
+            height: 150px;
+            background-color: rgb(117, 117, 117);
+            margin: 7px;
+            transition: all 0.3s;
+            position: relative;
+            top: 800px;
+            left: 160px;
+            z-index: 0;
+            
+
+        }
+       
+        .square:hover {
+            background-color: rgb(235, 235, 235);
+            transform: scale(1.2);
+        }
+        
+        .square:hover + .picturefour  {
+            margin-top: -50px;
+        }
+        
+        .picturefour {
+            width: 8%;
+            height: 30%;
+            position:absolute;
+            top: 42%;
+            left: 37%;
+            border-radius: 5px;
+            transition: all 0.3s;
+            transform: rotate(60deg);
+        }
+        .square:hover + .picturefour  {
+            margin-top: -50px;
+        }
+        
+        .picturefive {
+            width: 7%;
+            height: 20%;
+            position:absolute;
+            top: 57%;
+            left: 33%;
+            border-radius: 5px;
+            transition: all 0.3s;
+            transform: rotate(-5deg);
+        }
+        .square:hover + .picturefive {
+            margin-left: -50px;
+        }
+        
+        .picturesix{
+            width: 5%;
+            height: 22%;
+            position:absolute;
+            top: 46%;
+            left: 58%;
+            border-radius: 5px;
+            transition: all 0.3s;
+            transform: rotate(-80deg);
+        }
+        .square:hover + .picturesix{
+            margin-right: 60px;
+        }
+        
+        .picturesiven{
+            width: 9%;
+            height: 18%;
+            position:absolute;
+            top: 57%;
+            left: 60%;
+            border-radius: 5px;
+            transition: all 0.3s;  
+        }
+        .square:hover + .picturesiven{
+            margin-top: 50px;
+        }
+               
+        .picturenine{
+            width: 7%;
+            height: 15%;
+            position:absolute;
+            top: 70%;
+            left: 45%;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .square:hover + .picturenine{
+            margin-top: -50px;
+        }
+    
+        .pictureten{
+            width: 6.5%;
+            height: 15%;
+            position:absolute;
+            top: 70%;
+            left: 50%;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .square:hover + .pictureten{
+            margin-left: 50px;
+        }
+        .picture11{
+            width: 6.5%;
+            height: 17%;
+            position:absolute;
+            top: 80%;
+            left: 42%;
+            border-radius: 5px;
+            transition: all 0.3s;
+            transform: rotate(60deg);
+        }
+        .square:hover + .picture11{
+            margin-top: -50px;
+        }
+        .picture12{
+            width: 6.5%;
+            height: 17%;
+            position:absolute;
+            top: 80%;
+            left: 53%;
+            border-radius: 5px;
+            transition: all 0.3s;
+            transform: rotate(-60deg);
+        }
+        .square:hover + .picture12{
+            margin-top: 50px;
+        }
+      
+      
+        .line::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 250px;
+        left: 690px;
+        width: 1px;
+        height: 200px;
+        background-color: rgb(241, 241, 241);
+        margin-top: 10px;
+        }
+       .line2::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 250px;
+        left: 850px;
+        width: 1px;
+        height: 200px;
+        background-color: rgb(241, 241, 241);
+        margin-top: 10px;
+        }
+
+        .rotate-image {
+        position: absolute;
+        top: -15%;
+        left: 2%;
+        width: 30%;
+       
+       transition: transform 0.5s;
+        }
+
+       .rotate-image:hover {
+       transform: rotate(360deg);
+       }
+
+        .circle {
+            width: 300px;
+            height: 100px;
+            /* background-color: rgb(255, 255, 255); */
+            position: absolute;
+            top: 890px;
+            left: 1330px;
+            border-radius: 50%;
+            display: none;
+        }
+
+        .audio {
+            display: none;
+        }
+
+
+
+        .container1 {
+            position: absolute;   
+             display: inline-block;
+             width: 100%;
+             height: 100%;
+                   }
+         .image1,.image2{
+            width: 8%;
+            height: 20%;
+         }
+
+        .image1 {
+            position: absolute;
+           margin-top: 30%;
+           margin-left: 46.5%;
+            z-index: 50;
+            opacity: 1;
+        }
+
+        .image2 {
+            position: absolute;
+            width: 12%;
+            height: 12%;
+            top: 50%;
+            left: 57%;
+            opacity: 0;
+            z-index: 50;
+            transition: opacity 0.3s;        }
+
+        .container1:hover .image2 {
+            opacity: 1;
+        }
+
+        @keyframes fade {
+          0% { opacity: 1; }
+         100% { opacity: 0; }
+        }
+
+        .fade-text {
+         position: absolute;  
+         animation: fade 5s infinite;
+         top: 115%;
+         left: 36%;
+         color: #ffffff;
+        }
+
+
+       
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <img src="身体.png" alt="图片1" class="image1">
+        <img src="气泡框.png" alt="图片2" class="image2">
+    </div>
+
+
+    <div class="custom-text">welcome     to    theater ,  here  you   can   control   "every  thing"</div>
+    <audio id="music" src="掌声.mp3"></audio>
+
+   
+    <div class="line"></div>
+    <div class="line2"></div>
+    <img class="picture"id="picture1" src="背景.png"> 
+    <img class="picture"id="picture2" src="框.png"> 
+    <img class="picture"id="picture3" src="框.png"> 
+    <img class="picture"id="picturetwo" src="手.png"> 
+    <img class="picture"id="picture" src="幕布.png">
+  
+    
+    <div class="text">C<br>a<br>t<br>c<br>h<br><br>i<br>t<br>!<br></div>
+    <div class="text2">C<br>a<br>t<br>c<br>h<br><br>i<br>t<br>!<br></div>  
+
+
+
+        <div class="square" onmouseover="playMusic()"></div>  <img class="picturefour "src="左臂上.png"></div>
+        <div class="square" onmouseover="playMusic()"></div>  <img class="picturefive "src="左臂下.png"></div>
+        <div class="square" onmouseover="playMusic()"></div>  <img class="picturesix "src="右臂上.png"></div>
+        <div class="square" onmouseover="playMusic()"></div>  
+        <div class="square" onmouseover="playMusic()"></div>  <img class="picturesiven"src="右臂下.png"></div>
+        <div class="square" onmouseover="playMusic()"></div>  
+        <div class="square" onmouseover="playMusic()"></div>    <img class="picturenine"src="左腿.png"></div>
+        <div class="square" onmouseover="playMusic()"></div>  
+        <div class="square" onmouseover="playMusic()"></div>   <img class="pictureten"src="右腿.png"></div>
+        <div class="square" onmouseover="playMusic()"></div>   
+        <div class="square" onmouseover="playMusic()"></div>  <img class="picture11"src="左脚.png"></div>
+        <div class="square" onmouseover="playMusic()"></div>   
+        <div class="square" onmouseover="playMusic()"></div>  <img class="picture12"src="右脚.png"></div>
+        <div class="circle" onclick="window.location.href='2zindexs2 终.html'">
+            <img class="rotate-image" src="旋钮.png" alt="Your Image">
+        </div>
+        </div>
+        
+    
+   
+
+     <div id="ball"></div>
+     <div id="circle"></div>
+
+
+     <div class="fade-text">
+        <h1>slide the mouse on the keys</h1> 
+      </div>
+ 
+
+    
+    
+<script>
+        var ball = document.getElementById("ball");
+        var screenWidth = window.innerWidth;
+        var screenHeight = window.innerHeight;
+        var squares = document.getElementsByClassName("square");
+     
+
+        // 设置小球的初始位置
+        var initialX = screenWidth / 2 - 25;
+        var initialY = screenHeight / 2 - 25;
+        ball.style.left = initialX + "px";
+        ball.style.top = initialY + "px";
+
+        // 小球的运动函数
+        function moveBall() {
+            var x = Math.random() * (screenWidth - 50);
+            var y = Math.random() * (screenHeight - 50);
+            ball.style.left = x + "px";
+            ball.style.top = y + "px";
+        }
+
+        // 点击小球时的事件处理函数
+        ball.addEventListener("click", function() {
+            ball.style.left = initialX + "px";
+            ball.style.top = initialY + "px";
+            clearInterval(interval);
+        });
+
+        // 每隔2秒调用一次moveBall函数，使小球运动
+        var interval = setInterval(moveBall,2000);
+
+        var squares = document.getElementsByClassName("square");
+        var circle = document.getElementsByClassName("circle")[0];
+        var audio = document.getElementsByClassName("audio")[0];
+
+        var currentIndex = 0;
+        
+       
+        function showCircle() {
+            circle.style.display = "block";
+        }
+
+        function playMusic() {
+            audio.play();
+        }
+
+        function handleMouseOver() {
+            currentIndex++;
+            if (currentIndex === squares.length) {
+                showCircle();
+            }
+        }
+     
+
+        function handleClick() {
+            playMusic();
+        }
+
+        for (var i = 0; i < squares.length; i++) {
+            squares[i].addEventListener("mouseover", handleMouseOver);
+        }
+
+        circle.addEventListener("click", handleClick);
+
+        function playMusic() {
+            var music = document.getElementById('music');
+            music.play();
+        }
+        
+       
+
+        </script>
+    
+</body>
+</html>

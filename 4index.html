@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: rgb(47, 47, 47);
+        }
+        .text {
+        position: absolute;
+        font-size: 20px;
+        color: #ffffff;
+        left: 41.5% ;
+        top: 2%;
+        animation: slide 10s linear infinite;
+       }
+        #picture1
+       {position: absolute;
+        top: 1%;
+        left: 11%;
+        width: 80%;
+
+       }
+       #picture2
+       {position: absolute;
+        top: 63%;
+        left: 37%;
+        width: 12%;
+
+       }
+       .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+  
+
+
+
+
+    </style>
+</head>
+<body> 
+    <div></div> 
+    <div class="text">You have a letter to check!</div>
+ 
+     <img class="picture" id="picture1" src="书桌.png"></div>
+     <img class="picture" id="picture2" src="letter.gif" onclick="showPopup()"></div>
+      
+     <div id="popup" class="popup">
+        <img  src="letterflower.png" width="500" alt="弹出图片">
+    </div>
+
+    <script>
+        function showPopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "block";
+        }
+    </script>
+   
+     
+  
+
+   
+ 
+</body>
+</html> 

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+        #picture1
+       {position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 100vw;
+
+       }
+       #picture2
+       {position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 100vw;
+
+       }
+       #picture3
+       {position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 100vw;
+
+       }
+
+       #picture4 {
+        position: absolute;
+            background-image: url("7.png");
+            width: 200px;
+            height: 120px;
+            top: 100px;
+            left: 20px;
+            background-size: cover;
+         
+        }
+        #picture5 {
+        position: absolute;
+            background-image: url("7.png");
+            width: 100px;
+            height: 50px;
+            top: 500px;
+            left: 200px;
+            background-size: cover;
+        }
+        #picture6 {
+        position: absolute;
+            background-image: url("7.png");
+            width: 160px;
+            height: 100px;
+            top: 300px;
+            left: 300px;
+            background-size: cover;
+        }
+        #picture7 {
+        position: absolute;
+            background-image: url("8.png");
+            width: 160px;
+            height: 100px;
+            top: 350px;
+            left: 1300px;
+            background-size: cover;
+        }
+        #picture8 {
+        position: absolute;
+            background-image: url("8.png");
+            width: 160px;
+            height: 100px;
+            top: 200px;
+            left: 1000px;
+            background-size: cover;
+        }
+        #picture9 {
+        position: absolute;
+            background-image: url("9.png");
+            width: 160px;
+            height: 100px;
+            top: 600px;
+            left: 1000px;
+            background-size: cover;
+        }
+        #picture10 {
+        position: absolute;
+            background-image: url("10.png");
+            width: 160px;
+            height: 100px;
+            top: 800px;
+            left: 300px;
+            background-size: cover;
+        }
+        #picture11 {
+        position: absolute;
+            background-image: url("9.png");
+            width: 160px;
+            height: 100px;
+            top: 650px;
+            left: 120px;
+            background-size: cover;
+        }
+        #picture12 {
+        position: absolute;
+            background-image: url("10.png");
+            width: 160px;
+            height: 100px;
+            top: 780px;
+            left: 1320px;
+            background-size: cover;
+        }
+
+        #picture13 {
+        position: absolute;
+            background-image: url("11.png");
+            width: 160px;
+            height: 100px;
+            top: 220px;
+            left: 520px;
+            background-size: cover;
+        }
+        
+        
+        
+     
+        
+
+
+
+        .container {
+            position: relative;
+            display: inline-block;
+            top: 1px;
+            left: 10px;
+            
+        }
+        
+        
+        .square {
+            position: absolute;
+            width: 300px;
+            height: 100px;
+            background-color: rgb(255, 255, 255);
+            display: none;
+            cursor: pointer;
+        }
+        
+        .square1 {
+         
+            top: 300px;
+            left: 300px;
+            text-align: center;
+            padding-top: 5%;
+            font-size: x-large;
+        }
+        
+        .square2 {
+            top: 300px;
+            left: 900px;
+            text-align: center;
+            padding-top: 5%;
+            font-size: x-large;
+        }
+        #p1{
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+       #p2{
+            position: absolute;
+            top: 20px;
+            left: 100px;
+        }
+
+
+
+    </style>
+</head>
+<body>  
+   
+     <img class="picture" id="picture3" src="旧地.png"></div>
+     <img class="picture" id="picture1" src="云.png"></div>
+     <img class="picture" id="picture2" src="花.png"></div>
+       
+        <img class="picture" id="picture4" ></div>
+        <img class="picture" id="picture5" ></div>
+        <img class="picture" id="picture6" ></div>
+        <img class="picture" id="picture7" ></div>
+        <img class="picture" id="picture8" ></div>
+        <img class="picture" id="picture9" ></div>
+        <img class="picture" id="picture10" ></div>
+        <img class="picture" id="picture11" ></div>
+        <img class="picture" id="picture12" ></div>
+        <img class="picture" id="picture13" ></div>
+
+    
+    
+    
+     <div class="container">
+        <img src="流泪.png" width="1500px" alt="Image" onclick="showSquares()">
+        <div class="overlay" onclick="hideSquares()"></div>
+        <div class="square square1" onclick="window.location.href='1zindexs 终.html'"><p1>CATCH   IT</p1></div>
+        <div class="square square2" onclick="window.location.href='4index.html'"><p2>LET IT GO</p2></div>
+    
+
+    
+     
+
+  
+
+    
+
+     
+    </div>
+
+    <script>
+        function showSquares() {
+            document.querySelector('.overlay').style.display = 'block';
+            document.querySelectorAll('.square').forEach(function(square) {
+                square.style.display = 'block';
+            });
+        }
+        
+        function hideSquares() {
+            document.querySelector('.overlay').style.display = 'none';
+            document.querySelectorAll('.square').forEach(function(square) {
+                square.style.display = 'none';
+            });
+        }
+
+
+
+        var picture = document.querySelector("picture");
+    
+        document.addEventListener("mousemove", function(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+
+            if (x< window.innerWidth / 3 && y < window.innerHeight / 2) {
+                picture4.style.display = "block";
+                picture5.style.display = "block";s
+                picture6.style.display = "block";
+             
+               
+            } 
+            
+
+            else {
+
+                picture4.style.display = "none";
+                picture5.style.display = "none";
+                picture6.style.display = "none";
+         
+            }
+
+
+            if (x> window.innerWidth / 3 && y < window.innerHeight / 2) {
+
+                picture7.style.display = "block";
+                picture8.style.display = "block";
+               
+            } 
+            
+
+            else {
+  
+                picture7.style.display = "none";
+                picture8.style.display = "none";
+             
+            }
+
+
+
+
+            if (x < window.innerWidth / 1.5 && y > window.innerHeight / 2) {
+               
+                picture9.style.display = "block";
+                picture10.style.display = "block";
+  
+               
+            } else {
+               
+                picture9.style.display = "none";
+                picture10.style.display = "none";
+   
+             
+            }
+
+
+            if (x > window.innerWidth / 2 && y > window.innerHeight / 2) {
+               
+    
+               picture11.style.display = "block";
+               picture12.style.display = "block";
+              
+           } else {
+              
+ 
+               picture11.style.display = "none";
+               picture12.style.display = "none";
+            
+           }
+        });
+    
+    </script>
+</body>
+</html> 
